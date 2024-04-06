@@ -1,6 +1,5 @@
 #include "ConstantPool.hpp"
 #include <stdarg.h>
-#include <iostream>
 
 u2 ConstantPoolInfo::find_entry(u1 tag, ...) {
 	if (entries.size() < 1) return NULL;

@@ -1,5 +1,4 @@
 #include "ClassFileParser.hpp"
-#include <iostream>
 
 ClassFileParser::ClassFileParser(ClassFile* cf) : cf(cf) {
 	cf->magic_dword   = cf->stream.get_u4();

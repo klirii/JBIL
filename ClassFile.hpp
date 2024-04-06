@@ -40,4 +40,6 @@ public:
 
 private:
 	std::shared_ptr<u1[]> temp_buffer;
+
+	void initialize(u1* buffer, u4 size);
 };

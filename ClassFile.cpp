@@ -15,11 +15,16 @@ ClassFile::ClassFile(const char* path) {
 		temp_buffer = std::shared_ptr<u1[]>(new u1[size]);
 		is.read((char*)temp_buffer.get(), size);
 
-		this->ClassFile::ClassFile(temp_buffer.get(), static_cast<u4>(size));
+		initialize(temp_buffer.get(), static_cast<u4>(size));
 	}
 }
 
-ClassFile::ClassFile(u1* buffer, u4 size) : stream(buffer, size) {
+ClassFile::ClassFile(u1* buffer, u4 size) {
+	initialize(buffer, size);
+}
+
+void ClassFile::initialize(u1* buffer, u4 size) {
+	stream = ClassFileStream(buffer, size);
 	ClassFileParser(this);
 }
 
