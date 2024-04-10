@@ -26,3 +26,17 @@ Note: The "Bytecodes.hpp" header must be included before changing method bytecod
 or
 
 ![image](https://github.com/klirii/JBIL/assets/83013244/598e81d3-9b28-4943-b9df-f4a677f92574)
+# Requirements
+x64 Windows 7, 8, 8.1, 10, 11
+# Including the library in a Visual Studio project
+Visual Studio 2022 will be used as an example
+
+1. Clone the repository to a directory you are comfortable with
+2. Go to [releases](https://github.com/klirii/JBIL/releases "JBIL releases") and download the latest available version of the static libraries
+3. Extract the archive to the directory where you cloned the repository
+4. Open your project in Visual Studio, right-click on the project in the Solution Explorer and select "Properties"
+5. In the "Configuration Properties" section, select "All Configurations" from the "Configuration" dropdown menu
+6. In the "VC++ Directories" section, select "Include Directories", click on the dropdown menu, click "Edit" and add **(path to cloned repository)/include** there and click "OK"
+7. In the same section, select "Library Directories" and add there the path to the static library folder for the desired configuration
+8. In the "Linker" section, open the "Input" subsection and add JBIL.lib to "Additional Dependencies"
+9. Done!
