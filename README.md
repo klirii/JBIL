@@ -30,7 +30,6 @@ or
 x64 Windows 7, 8, 8.1, 10, 11
 # Including the library in a Visual Studio project
 Visual Studio 2022 will be used as an example
-
 1. Clone the repository to a directory you are comfortable with
 2. Go to [releases](https://github.com/klirii/JBIL/releases "JBIL releases") and download the latest available version of the static libraries
 3. Extract the archive to the directory where you cloned the repository
@@ -40,3 +39,5 @@ Visual Studio 2022 will be used as an example
 7. In the same section, select "Library Directories" and add there the path to the static library folder for the desired configuration
 8. In the "Linker" section, open the "Input" subsection and add JBIL.lib to "Additional Dependencies"
 9. Done!
+# Notes
+You can find more information about [classfile structure](https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-4.html "Chapter 4. The class File Format") and [bytecode](https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-6.html "Chapter 6. The Java Virtual Machine Instruction Set") on the Oracle website.
